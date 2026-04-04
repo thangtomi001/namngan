@@ -91,32 +91,32 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-transparent"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-4xl flex flex-col items-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 font-medium mb-6 backdrop-blur-md">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
               </span>
-              Dự án tâm điểm TP. Thanh Hóa 2026
+              Dự án Heragon Thanh Hóa - Tâm điểm 2026
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-              SỞ HỮU ĐẤT NỀN SỔ ĐỎ <br/>
-              <span className="block text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">
-                VEN SÔNG MÃ
-              </span>
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">
+              DỰ ÁN HERAGON THANH HÓA
             </h1>
-            <p className="text-lg md:text-xl text-slate-200 mb-8 leading-relaxed">
+            <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 mb-8">
+              ĐẤT NỀN SỔ ĐỎ VEN SÔNG MÃ
+            </h2>
+            <p className="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed max-w-3xl">
               Quy mô 57.9ha tại Hàm Rồng - Trục phát triển mới của thành phố. 
               Cơ hội <strong className="text-amber-400">GẤP ĐÔI TÀI SẢN</strong> trước thềm siết luật phân lô bán nền 2025.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
               <button onClick={scrollToForm} className="bg-amber-600 hover:bg-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition flex items-center justify-center gap-2 shadow-xl shadow-amber-600/20">
                 Nhận bảng giá ngay <ArrowRight className="h-5 w-5" />
               </button>
@@ -125,7 +125,7 @@ export default function App() {
               </button>
             </div>
             
-            <div className="mt-10 flex items-center gap-6 text-sm text-slate-300">
+            <div className="mt-10 flex items-center justify-center gap-6 text-sm text-slate-300">
               <div className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-amber-400"/> Sổ đỏ lâu dài</div>
               <div className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-amber-400"/> Tiềm năng +30%/năm</div>
             </div>
