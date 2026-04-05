@@ -59,6 +59,7 @@ export default function App() {
           <div className="hidden md:flex items-center gap-6">
             <a href="#tong-quan" className="text-sm font-medium hover:text-amber-600 transition">Tổng quan</a>
             <a href="#vi-tri" className="text-sm font-medium hover:text-amber-600 transition">Vị trí</a>
+            <a href="#mat-bang" className="text-sm font-medium hover:text-amber-600 transition">Mặt bằng</a>
             <a href="#video-du-an" className="text-sm font-medium hover:text-amber-600 transition">Video</a>
             <a href="#san-pham" className="text-sm font-medium hover:text-amber-600 transition">Sản phẩm</a>
             <a href="#tin-tuc" className="text-sm font-medium hover:text-amber-600 transition">Tin tức</a>
@@ -178,6 +179,46 @@ export default function App() {
                 <p className="text-slate-600 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Floor Plan Section */}
+      <section id="mat-bang" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">MẶT BẰNG <span className="text-amber-600">DỰ ÁN</span></h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">Quy hoạch đồng bộ, thiết kế tối ưu, đa dạng loại hình sản phẩm.</p>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100"
+          >
+            <img 
+              src="/mat-bang.png" 
+              alt="Mặt bằng phân lô Heragon City" 
+              className="w-full h-auto object-contain"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80';
+              }}
+            />
+          </motion.div>
+          
+          <div className="mt-10 text-center">
+             <button onClick={scrollToForm} className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg shadow-amber-600/30 inline-flex items-center gap-2">
+                Tải mặt bằng nét (PDF) <ArrowRight className="h-5 w-5" />
+             </button>
           </div>
         </div>
       </section>
