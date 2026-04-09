@@ -47,9 +47,14 @@ export default function Home() {
         body: formDataObj
       });
       
-      // Track Lead event with Facebook Pixel
+      // Track Lead event with Facebook Pixel (Event Lead chuẩn kèm tham số)
       if (typeof (window as any).fbq === 'function') {
-        (window as any).fbq('track', 'Lead');
+        (window as any).fbq('track', 'Lead', {
+          content_name: formData.product, // Sản phẩm khách hàng quan tâm
+          content_category: 'Bất động sản',
+          currency: 'VND',
+          value: 0 // Bạn có thể thay đổi giá trị chuyển đổi nếu cần
+        });
       }
 
       setIsSuccess(true);
