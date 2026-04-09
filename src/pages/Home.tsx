@@ -131,8 +131,42 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Project Overview Image */}
+      <section id="tong-quan" className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">TỔNG QUAN <span className="text-amber-600">DỰ ÁN</span></h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">Thông tin tổng quan về quy mô và các loại hình sản phẩm tại Heragon City.</p>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white"
+          >
+            <img 
+              src="/tong-quan.png" 
+              alt="Tổng quan dự án Heragon City" 
+              className="w-full h-auto object-contain"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80';
+              }}
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Reasons to Invest */}
-      <section id="tong-quan" className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
