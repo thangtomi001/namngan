@@ -47,6 +47,11 @@ export default function Home() {
         body: formDataObj
       });
       
+      // Track Lead event with Facebook Pixel
+      if (typeof (window as any).fbq === 'function') {
+        (window as any).fbq('track', 'Lead');
+      }
+
       setIsSuccess(true);
       setFormData({ name: '', phone: '', product: 'Đất nền liền kề' });
       setTimeout(() => setIsSuccess(false), 5000);
